@@ -12,11 +12,13 @@
 		var sketch = document.getElementById("sketch");
 		var context = sketch.getContext("2d");
 
+		context.fillStyle = "#66ffcc";
 		context.fillRect(50,50,50,50);
 		context.beginPath();
 		context.arc(150, 75, 25, 0, 2*Math.PI, true);
 		context.closePath();
 		context.fill();
+
 	}
 </script>
 
