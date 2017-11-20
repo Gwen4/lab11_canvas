@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<canvas id="sketch" width="300" height="300"></canvas>
+
+<script type="text/javascript">
+	
+	function draw()
+	{
+		var sketch = document.getElementById("sketch");
+		var context = sketch.getContext("2d");
+
+		var size = prompt("Enter diameter for your circle");
+	function getColor()
+	{
+		var color = prompt("Enter a color");
+		switch (color)
+		{
+			case "blue":
+				color == "#3333ff";
+				break;
+			case "red":
+				color == "#cc0000";
+				break;
+			case "green":
+				color == "#33cc33";
+				break;
+			case "yellow":
+				color == "#ffff1a";
+				break;
+			case "pink":
+				color == "#ff66ff";
+				break;
+			case "purple":
+				color == "#6600cc";
+				break;	
+		}
+		return color;
+	}
+
+		context.fillStyle = getColor();
+		context.beginPath();
+		context.arc(150, 150, size, 0, 2*Math.PI, true);
+		context.closePath();
+		context.fill();
+	}
+</script>
+
+<body onload="draw()">
+
+</body>
+</html>
