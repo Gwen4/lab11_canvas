@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<canvas id="sketch" width="550" height="500"></canvas>
+
+<script type="text/javascript">
+	function draw()
+	{
+		var sketch = document.getElementById("sketch");
+		var context = sketch.getContext("2d");
+
+		for(var n = 0; n < 10; n++)
+		{
+			if(n % 2 == 1)
+			{
+				context.fillStyle = "#ff99ff";
+				context.fillRect(n*80, 230, 40, 40);
+			}
+			else
+			{
+				context.fillStyle = "#993366";
+				context.beginPath();
+				context.arc(n*80+20, 250, 20, 0, 2*Math.PI, true);
+				context.closePath();
+				context.fill();
+			}
+		}
+	}
+</script>
+
+<body onload="draw();"></body>
+</html>
