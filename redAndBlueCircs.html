@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<canvas id='sketch' width="500" height="500"></canvas>
+
+<body onload="draw();"></body>
+
+<script type="text/javascript">
+	var sketch = document.getElementById('sketch');
+	var context = sketch.getContext("2d");
+
+	function draw()
+	{
+		//red circles
+		for(var c = 6; c > 1; c--)
+		{
+			var r = c*25;
+			var size = c*10;
+			context.fillStyle = 'rgb(' + r + ',0,0)';
+			context.beginPath();
+			context.arc(120,250, size, 0, 2*Math.PI, true);
+			context.closePath();
+			context.fill();
+			//console.log('circle' + c + 'has been made');
+		}
+
+		//blue circles
+		for(var c = 6; c > 1; c--)
+		{
+			var b = c*25;
+			var size = c*10;
+			context.fillStyle = 'rgb(0' + ',' + '0' + ',' + b + ')';
+			context.beginPath();
+			context.arc(300,250, size, 0, 2*Math.PI, true);
+			context.closePath();
+			context.fill();
+			//console.log('circle' + c + 'has been made');
+		}
+	}
+
+</script>
+</html>
