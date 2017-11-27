@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<canvas id='sketch' width="500" height="500"></canvas>
+
+<body onload="draw();"></body>
+
+<script type="text/javascript">
+	var sketch = document.getElementById('sketch');
+	var context = sketch.getContext("2d");
+
+	for(var n = 4; n > 1; n--)
+	{
+		var r = Math.floor(Math.random()* 256);
+		var g = Math.floor(Math.random()* 256);
+		var b = Math.floor(Math.random()* 256);
+		var size = n*25;
+		context.fillStyle = 'rgb(' + r + ',' + g + ',' + b + ')';
+		context.beginPath();
+		context.arc(250,250, size, 0, 2*Math.PI, true);
+		context.closePath();
+		context.fill();
+	}
+</script>
+</html>
